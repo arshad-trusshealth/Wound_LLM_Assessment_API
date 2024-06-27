@@ -16,8 +16,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application into the container
 COPY . .
-
+RUN chmod +x ./install-ollama.sh 
 RUN /bin/bash -c './install-ollama.sh'
+# RUN /bin/bash -c './install-ollama.sh'
 # RUN /bin/bash -c './start-ollama.sh'
 
 # Set the environment variable for Flask
