@@ -1,1 +1,3 @@
-OLLAMA_HOST=0.0.0.0 ollama serve
+#!/bin/bash
+export OLLAMA_HOST=${OLLAMA_HOST:-0.0.0.0}
+ollama serve
