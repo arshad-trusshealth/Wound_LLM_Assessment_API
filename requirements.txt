@@ -2,3 +2,4 @@ flask
 ollama
 langchain
 openai
+langchain_community
