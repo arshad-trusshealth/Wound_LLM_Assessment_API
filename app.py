@@ -11,7 +11,7 @@ from langchain_core.output_parsers import StrOutputParser
 # import torch
 from dotenv import load_dotenv
 # from groq import Groq test commit
-
+from flask_cors import CORS
 load_dotenv()
 
 api_key = os.getenv('OPEN_AI_API_KEY')
@@ -23,6 +23,7 @@ openai.api_key = api_key
 # groq_api = ""
 
 app = Flask(__name__)
+CORS(app)
 device_cuda = "cuda"
 dev_cpu = "cpu"
 
